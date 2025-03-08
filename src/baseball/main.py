@@ -14,6 +14,13 @@ def check_valid_input():
 
     return [int(x) for x in arr_list]
 
+def regame():
+    val=input()
+    if val in ["1","2"]:
+        return int(val)
+    else:
+        raise ValueError("1혹은 2를 입력해주세요.")
+
 def make_num():
     return random.sample(range(1,10),3)
 
@@ -57,9 +64,9 @@ def main():
         try:
             game()
             print("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.")
-            if int(input())==1:
+            if regame()==1:
                 continue
-            elif int(input())==2:
+            elif regame()==2:
                 break
         except ValueError as e:
             print(e)
