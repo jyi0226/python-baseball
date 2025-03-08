@@ -15,7 +15,7 @@ def check_valid_input():
     return [int(x) for x in arr_list]
 
 def regame():
-    val=input()
+    val = input("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.: ")
     if val in ["1","2"]:
         return int(val)
     else:
@@ -63,7 +63,6 @@ def main():
     while(1):
         try:
             game()
-            print("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.")
             if regame()==1:
                 continue
             elif regame()==2:
