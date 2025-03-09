@@ -27,16 +27,21 @@ def make_num():
 def input_num():
     return check_valid_input()
 
-def check(com,arr):
+def check(com, arr):
+    """
+    숫자 야구 게임의 결과를 계산하는 함수
+    - 같은 위치에 같은 숫자가 있으면 스트라이크
+    - 다른 위치에 같은 숫자가 있으면 볼
+    """
     strikes=0
     balls=0
 
     for i in range(3):
-        if arr[i]==com[i]:
-            strikes+=1
+        if arr[i] == com[i]:
+            strikes += 1
         else:
             if arr[i] in com:
-                balls+=1
+                balls += 1
 
     return strikes, balls
 
