@@ -8,6 +8,8 @@ def check_valid_input():
     for i in range(3):
         if not arr_list[i].isdigit():
             raise ValueError("정수를 입력하세요")
+        if int(arr_list[i]) < 1 or int(arr_list[i] > 9:
+            raise ValueError("1부터 9까지의 숫자만 입력하세요")
     if len(arr_list) != len(set(arr_list)):
         raise ValueError("중복된 숫자를 입력하였습니다")
 
