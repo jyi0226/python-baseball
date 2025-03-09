@@ -8,7 +8,7 @@ def check_valid_input():
     for i in range(3):
         if not arr_list[i].isdigit():
             raise ValueError("정수를 입력하세요")
-        if int(arr_list[i]) < 1 or int(arr_list[i] > 9:
+        if int(arr_list[i]) < 1 or int(arr_list[i]) > 9:
             raise ValueError("1부터 9까지의 숫자만 입력하세요")
     if len(arr_list) != len(set(arr_list)):
         raise ValueError("중복된 숫자를 입력하였습니다")
@@ -24,12 +24,15 @@ def regame():
         raise ValueError("1혹은 2를 입력해주세요.")
 
 
+
 def make_num():
-    return random.sample(range(1,10),3)
+    return random.sample(range(1,10), 3)
+
 
 
 def input_num():
     return check_valid_input()
+
 
 
 def check(com, arr):
@@ -66,7 +69,8 @@ def game():
             break
         else:
             print(f"{balls}볼 {strikes}스트라이크")
-        
+
+
 
 def main():
 
