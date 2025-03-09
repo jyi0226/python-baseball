@@ -82,7 +82,7 @@ def main():
                 break
         except ValueError as e:
             print(e)
-            break
+            raise
 
 
 if __name__ == "__main__":
