@@ -1,5 +1,6 @@
 import random
 
+
 def check_valid_input():
     arr_list = list(input("숫자를 입력하세요: "))
 
@@ -18,21 +19,18 @@ def check_valid_input():
 
 def regame():
     val = input("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.: ")
-    if val in ["1","2"]:
+    if val in ["1", "2"]:
         return int(val)
     else:
-        raise ValueError("1혹은 2를 입력해주세요.")
-
+        raise ValueError("1 혹은 2를 입력해주세요.")
 
 
 def make_num():
-    return random.sample(range(1,10), 3)
-
+    return random.sample(range(1, 10), 3)
 
 
 def input_num():
     return check_valid_input()
-
 
 
 def check(com, arr):
@@ -41,8 +39,8 @@ def check(com, arr):
     - 같은 위치에 같은 숫자가 있으면 스트라이크
     - 다른 위치에 같은 숫자가 있으면 볼
     """
-    strikes=0
-    balls=0
+    strikes = 0
+    balls = 0
 
     for i in range(3):
         if arr[i] == com[i]:
@@ -56,8 +54,8 @@ def check(com, arr):
 
 def game():
     com = make_num()
-    
-    while(1):
+
+    while True:
         arr = input_num()
         strikes, balls = check(com, arr)
 
@@ -71,9 +69,7 @@ def game():
             print(f"{balls}볼 {strikes}스트라이크")
 
 
-
 def main():
-
     print("숫자 야구 게임을 시작합니다.")
 
     while True:
@@ -86,7 +82,8 @@ def main():
                 break
         except ValueError as e:
             print(e)
-            raise
-    
+            break
+
+
 if __name__ == "__main__":
     main()
