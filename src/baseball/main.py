@@ -65,16 +65,17 @@ def main():
 
     print("숫자 야구 게임을 시작합니다.")
 
-    while(1):
+    while True:
         try:
             game()
-            if regame()==1:
+            choice = regame()
+            if choice == 1:
                 continue
-            elif regame()==2:
+            elif choice == 2:
                 break
         except ValueError as e:
             print(e)
-            break
+            raise
     
 if __name__ == "__main__":
     main()
